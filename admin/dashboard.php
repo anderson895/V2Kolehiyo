@@ -27,7 +27,7 @@ $user_count = $row['user_count'];
     <!-- Card for Total Customer -->
     <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
         <img src="assets/service.png" alt="students icon" class="mb-4 w-12 max-w-full" />
-        <h3 class="text-gray-700 font-semibold text-lg">Total Customer</h3>
+        <h3 class="text-gray-700 font-semibold text-lg">Total User</h3>
         <p class="text-blue-500 text-2xl font-bold count_users"><?=$user_count?></p>
     </div>
 
