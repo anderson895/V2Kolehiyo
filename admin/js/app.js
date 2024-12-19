@@ -25,7 +25,12 @@ $(document).ready(function () {
         e.preventDefault();
       
         var formData = new FormData(this); // Use FormData to handle file uploads
-      
+
+
+        $('.spinner').show();
+        $('#btnAddUser').prop('disabled', true);
+
+
         formData.append('requestType', 'Adduser'); // Append additional form data
       
         $.ajax({
@@ -42,6 +47,8 @@ $(document).ready(function () {
                 location.reload(); // Reload page after success
               }, 1000);
             } else {
+                $('.spinner').hide();
+                $('#btnAddUser').prop('disabled', false);
               alertify.error(response);
             }
           },
@@ -105,6 +112,10 @@ $(document).ready(function () {
       
         formData.append('requestType', 'Updateuser'); // Append additional form data
       
+
+        $('.spinner').show();
+        $('#btnUpdateUser').prop('disabled', true);
+
         $.ajax({
           type: "POST",
           url: "controller.php",
@@ -119,6 +130,9 @@ $(document).ready(function () {
                 location.reload(); // Reload page after success
               }, 1000);
             } else {
+
+                $('.spinner').hide();
+                $('#btnUpdateUser').prop('disabled', false);
               console.log(response);
               alertify.error('Added Failed. Please check the details.');
             }

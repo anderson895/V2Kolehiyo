@@ -1,9 +1,9 @@
 <?php
 // Database configuration
 $host = 'localhost';
-$db_name = 'portfolio_db'; // Replace with your database name
-$db_user = 'root'; // Default username for Laragon
-$db_password = ''; // Default password is empty
+$db_name = 'portfolio_db'; 
+$db_user = 'root'; 
+$db_password = ''; 
 
 // Create a connection
 $dsn = new mysqli($host, $db_user, $db_password, $db_name);

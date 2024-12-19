@@ -132,7 +132,18 @@ include('../includes/db.php');
 <!-- Modal for Adding Promo -->
 <div id="updateUserModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center" style="display:none;">
     <div class="bg-white rounded-lg shadow-lg w-full sm:w-[700px] p-6 max-h-[90vh] overflow-auto">
+
+      <!-- Spinner -->
+      <div class="spinner" style="display:none;">
+            <div class=" absolute inset-0 bg-white bg-opacity-75 flex items-center justify-center">
+                <div class="w-10 h-10 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
+            </div>
+        </div>
+
+
         <h3 class="text-lg font-semibold text-gray-800 mb-4">Update Information</h3>
+
+      
         <form id="updateuserForm">
 
             <div hidden class="mb-4">
@@ -146,7 +157,7 @@ include('../includes/db.php');
             </div>
 
             <div class="mb-6">
-                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <label for="password" class="block text-sm font-medium text-gray-700">New Password</label>
                 <input type="password" id="password" name="password" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" >
             </div>
 
@@ -207,7 +218,7 @@ include('../includes/db.php');
 
             <div class="flex justify-end gap-4 mt-6">
                 <button type="button" class="togglerUpdateUserClose bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded-md">Cancel</button>
-                <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md">Update User</button>
+                <button type="submit" id="btnUpdateUser" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md">Update User</button>
             </div>
          
         </form>
@@ -218,6 +229,15 @@ include('../includes/db.php');
 <!-- Modal for Adding Promo -->
 <div id="addUserModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center" style="display:none;">
     <div class="bg-white rounded-lg shadow-lg w-full sm:w-[700px] p-6 max-h-[90vh] overflow-auto">
+
+     <!-- Spinner -->
+     <div class="spinner" style="display:none;">
+            <div class=" absolute inset-0 bg-white bg-opacity-75 flex items-center justify-center">
+                <div class="w-10 h-10 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
+            </div>
+        </div>
+
+
         <h3 class="text-lg font-semibold text-gray-800 mb-6 text-center">Add New User</h3>
         <form id="adduserForm">
 
